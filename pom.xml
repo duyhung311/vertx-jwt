@@ -9,6 +9,7 @@
   <version>1.0.0-SNAPSHOT</version>
 
   <properties>
+    <jwt.version>0.11.5</jwt.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -44,6 +45,24 @@
       <groupId>io.vertx</groupId>
       <artifactId>vertx-web</artifactId>
     </dependency>
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt-api</artifactId>
+      <version>${jwt.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt-impl</artifactId>
+      <version>${jwt.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt-jackson</artifactId>
+      <version>${jwt.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
 
     <dependency>
       <groupId>io.vertx</groupId>
@@ -61,6 +80,17 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit-jupiter.version}</version>
       <scope>test</scope>
+    </dependency>
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-core</artifactId>
+          <version>6.1.2</version>
+      </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.28</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 
